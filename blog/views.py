@@ -1,7 +1,11 @@
 # imports
-from django.views.generic import TemplateView
+from django.views.generic import ListView
+
+from .models import Post
 
 # Create your views here.
-class HomePageView(TemplateView):
+class BlogPageListView(ListView):
+    model = Post
     template_name = 'blog/home.html'
+    
 
