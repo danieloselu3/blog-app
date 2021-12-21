@@ -1,5 +1,10 @@
 {% extends 'blog/layout.html' %}
 
 {% block body %}
-    <h1>Blog Homepage</h1>
+    {% for post in object_list %}
+        <div>
+            <h2><a href="#">{{ post.title }}</a></h2>
+            <p>{{ post.body }}</p>
+        </div>
+    {% endfor %}
 {% endblock %}
