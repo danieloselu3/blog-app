@@ -1,8 +1,9 @@
 # imports
 from django.urls import path
 
-from .views import HomePageView
+from .views import BlogPageListView
 
+app_name = 'blog'
 urlpatterns = [
-    path('', HomePageView.as_view(), name='home'),
+    path('', BlogPageListView.as_view(), name='home'),
 ]
